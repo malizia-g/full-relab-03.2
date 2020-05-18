@@ -1,0 +1,14 @@
+<h1>Angular Google Maps (AGM) Demo</h1>
+<p><a href="https://angular-maps.com/" target="_blank">Official Website</a></p>
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [zoomControl]="true">
+
+  <agm-marker *ngFor="let m of markers; let i = index" 
+    [latitude]="m.lat" [longitude]="m.lng" [label]="m.label"
+  >
+  </agm-marker>
+
+  <agm-data-layer [geoJson]="geoJsonObject" [style]="styleFunc">
+  </agm-data-layer>
+
+</agm-map>
